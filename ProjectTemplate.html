@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O&O Project Portfolio - Duurzame Huizen</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2563eb',
+secondary: '#64748b'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+.portfolio-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.attachment-link {
+  transition: all 0.3s ease;
+}
+.attachment-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+</style>
+</head>
+<body class="bg-gray-50" onload="initAnimations()">
+<header class="bg-white shadow-sm">
+<div class="max-w-7xl mx-auto px-4 py-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl font-bold text-gray-900 animate-fadeIn">Duurzame Huizen</h1>
+<div class="flex items-center gap-4 text-gray-600 animate-fadeIn" style="animation-delay: 0.2s;">
+<span>Pieter Oosterling</span>
+<span>•</span>
+<span>4 VWO</span>
+<span>•</span>
+<span>O&O</span>
+<span>•</span>
+<span>Januari - Maart 2025</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 py-8">
+<section class="bg-white rounded-lg shadow-sm p-6 mb-8" data-aos="fade-up">
+<h2 class="text-2xl font-semibold mb-4">Project Introductie</h2>
+<div class="prose max-w-none">
+<p class="mb-4">
+Voor dit O&O project werkten we samen met Duurzaam Wonen Nederland aan het ontwikkelen van energiezuinige en duurzame huisconcepten voor nieuwbouwwijken. Ons team, bestaande uit mijzelf, Emma Visser, Thomas de Vries en Sophie Bakker, heeft onderzoek gedaan naar verschillende mogelijkheden om woningen energieneutraal te maken en innovatieve bouwmaterialen toe te passen.
+</p>
+<div class="grid grid-cols-2 gap-6 mt-6">
+<div data-aos="fade-right" data-aos-delay="100">
+<h3 class="font-medium mb-2">Opdrachtgever</h3>
+<p>Duurzaam Wonen Nederland</p>
+<p>Contactpersoon: Dhr. M. Jansen</p>
+</div>
+<div data-aos="fade-left" data-aos-delay="200">
+<h3 class="font-medium mb-2">Team</h3>
+<ul class="list-disc list-inside">
+<li>Pieter Oosterling (Projectleider)</li>
+<li>Emma Visser (Onderzoeker)</li>
+<li>Thomas de Vries (Technisch ontwerper)</li>
+<li>Sophie Bakker (Communicatie)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white rounded-lg shadow-sm p-6 mb-8" data-aos="fade-up">
+<h2 class="text-2xl font-semibold mb-4">Portfolio</h2>
+<div class="grid grid-cols-2 gap-6">
+<div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+<img src="https://public.readdy.ai/ai/img_res/5eb72d27beed06092d3a95838140df4e.jpg" alt="Ontwerpschetsen" class="rounded-lg w-full h-64 object-cover mb-4">
+<h3 class="font-medium mb-2">Ontwerpfase</h3>
+<p class="text-gray-600">Initiële schetsen en concepten voor duurzame woningen met minimale ecologische voetafdruk.</p>
+<button class="mt-2 text-primary hover:text-primary-dark flex items-center gap-1 transition-all" onclick="showImageModal(this.previousElementSibling.previousElementSibling.previousElementSibling.src, this.previousElementSibling.previousElementSibling.innerText)">
+  <i class="ri-zoom-in-line"></i> Bekijk details
+</button>
+</div>
+<div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+<img src="https://public.readdy.ai/ai/img_res/fd0a54031eeca82333cb8d8f018187e8.jpg" alt="Prototype" class="rounded-lg w-full h-64 object-cover mb-4">
+<h3 class="font-medium mb-2">Prototype</h3>
+<p class="text-gray-600">3D-geprinte schaalmodel van ons duurzame huisconcept met geïntegreerde energiesystemen.</p>
+<button class="mt-2 text-primary hover:text-primary-dark flex items-center gap-1 transition-all" onclick="showImageModal(this.previousElementSibling.previousElementSibling.previousElementSibling.src, this.previousElementSibling.previousElementSibling.innerText)">
+  <i class="ri-zoom-in-line"></i> Bekijk details
+</button>
+</div>
+</div>
+</section>
+<section class="bg-white rounded-lg shadow-sm p-6 mb-8" data-aos="fade-up">
+<h2 class="text-2xl font-semibold mb-4">Verslagen</h2>
+<div class="space-y-6">
+<div class="border-b pb-4 hover:bg-blue-50 transition-colors p-3 rounded-lg" data-aos="fade-right" data-aos-delay="100">
+<div class="flex justify-between items-center mb-2">
+<h3 class="font-medium">15 Januari 2025</h3>
+<span class="text-gray-500">Week 1</span>
+</div>
+<p class="text-gray-600">Eerste teamvergadering gehad. Taken verdeeld en planning gemaakt. Ik ben verantwoordelijk voor het onderzoek naar duurzame bouwmaterialen en isolatietechnieken.</p>
+<button class="mt-2 text-primary hover:text-primary-dark flex items-center gap-1 transition-all" onclick="toggleDetails('week1')">
+  <i class="ri-add-line" id="week1-icon"></i> <span id="week1-text">Meer details</span>
+</button>
+<div id="week1-details" class="hidden mt-3 pl-4 border-l-2 border-primary">
+  <p class="text-gray-600">Tijdens onze eerste vergadering hebben we de projectdoelen besproken en een ambitieus plan opgesteld. Ik heb contact gelegd met verschillende leveranciers van duurzame bouwmaterialen om samples aan te vragen. Daarnaast heb ik een literatuuronderzoek gestart naar de nieuwste isolatietechnieken die geschikt zijn voor het Nederlandse klimaat.</p>
+</div>
+</div>
+<div class="border-b pb-4 hover:bg-blue-50 transition-colors p-3 rounded-lg" data-aos="fade-right" data-aos-delay="200">
+<div class="flex justify-between items-center mb-2">
+<h3 class="font-medium">22 Januari 2025</h3>
+<span class="text-gray-500">Week 2</span>
+</div>
+<p class="text-gray-600">Onderzoeksrapport afgerond over innovatieve isolatiematerialen en circulaire bouwmethoden. Presentatie voorbereid voor de opdrachtgever.</p>
+<button class="mt-2 text-primary hover:text-primary-dark flex items-center gap-1 transition-all" onclick="toggleDetails('week2')">
+  <i class="ri-add-line" id="week2-icon"></i> <span id="week2-text">Meer details</span>
+</button>
+<div id="week2-details" class="hidden mt-3 pl-4 border-l-2 border-primary">
+  <p class="text-gray-600">Mijn onderzoek heeft aangetoond dat hennepvezel isolatie en gerecyclede denim uitstekende alternatieven zijn voor traditionele isolatiematerialen. Ze hebben een lagere ecologische voetafdruk en bieden vergelijkbare of zelfs betere isolatiewaarden. De opdrachtgever was bijzonder geïnteresseerd in onze bevindingen over modulaire bouwsystemen die de constructietijd verkorten en afval verminderen.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white rounded-lg shadow-sm p-6 mb-8" data-aos="fade-up">
+<h2 class="text-2xl font-semibold mb-4">Persoonlijke Ervaringen</h2>
+<div class="grid grid-cols-2 gap-6">
+<div data-aos="fade-right" data-aos-delay="100" class="bg-green-50 p-4 rounded-lg transition-all hover:shadow-md">
+<h3 class="font-medium mb-2 flex items-center"><i class="ri-check-line text-green-500 mr-2"></i>Wat ging er goed?</h3>
+<ul class="space-y-2">
+<li class="flex items-start">
+  <span class="inline-block w-4 h-4 rounded-full bg-green-200 mt-1 mr-2 flex-shrink-0"></span>
+  <span class="text-gray-600">Effectieve samenwerking binnen het team</span>
+</li>
+<li class="flex items-start">
+  <span class="inline-block w-4 h-4 rounded-full bg-green-200 mt-1 mr-2 flex-shrink-0"></span>
+  <span class="text-gray-600">Goede communicatie met de opdrachtgever</span>
+</li>
+<li class="flex items-start">
+  <span class="inline-block w-4 h-4 rounded-full bg-green-200 mt-1 mr-2 flex-shrink-0"></span>
+  <span class="text-gray-600">Innovatieve oplossingen bedacht voor energieneutrale woningen</span>
+</li>
+<li class="flex items-start">
+  <span class="inline-block w-4 h-4 rounded-full bg-green-200 mt-1 mr-2 flex-shrink-0"></span>
+  <span class="text-gray-600">Succesvolle integratie van verschillende duurzame technologieën</span>
+</li>
+</ul>
+</div>
+<div data-aos="fade-left" data-aos-delay="200" class="bg-orange-50 p-4 rounded-lg transition-all hover:shadow-md">
+<h3 class="font-medium mb-2 flex items-center"><i class="ri-error-warning-line text-orange-500 mr-2"></i>Wat kon beter?</h3>
+<ul class="space-y-2">
+<li class="flex items-start">
+  <span class="inline-block w-4 h-4 rounded-full bg-orange-200 mt-1 mr-2 flex-shrink-0"></span>
+  <span class="text-gray-600">Tijdsplanning kon strakker</span>
+</li>
+<li class="flex items-start">
+  <span class="inline-block w-4 h-4 rounded-full bg-orange-200 mt-1 mr-2 flex-shrink-0"></span>
+  <span class="text-gray-600">Meer tussentijdse evaluaties</span>
+</li>
+<li class="flex items-start">
+  <span class="inline-block w-4 h-4 rounded-full bg-orange-200 mt-1 mr-2 flex-shrink-0"></span>
+  <span class="text-gray-600">Betere documentatie van beslissingen</span>
+</li>
+<li class="flex items-start">
+  <span class="inline-block w-4 h-4 rounded-full bg-orange-200 mt-1 mr-2 flex-shrink-0"></span>
+  <span class="text-gray-600">Kostenberekeningen hadden nauwkeuriger gekund</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="bg-white rounded-lg shadow-sm p-6 mb-8" data-aos="fade-up">
+<h2 class="text-2xl font-semibold mb-4">Reflectie</h2>
+<div class="prose max-w-none">
+<p class="mb-4" data-aos="fade-up" data-aos-delay="100">
+Dit project heeft mij veel geleerd over duurzame woningbouw en projectmanagement. De samenwerking met echte professionals uit de bouwsector was zeer waardevol en heeft mijn interesse in duurzame architectuur verder versterkt. Ik heb ontdekt hoe belangrijk het is om bij het ontwerpen van woningen niet alleen naar esthetiek te kijken, maar ook naar energieverbruik, materiaalgebruik en de totale levenscyclus van een gebouw.
+</p>
+<div class="bg-blue-50 p-4 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+<h3 class="font-medium mb-2 flex items-center">
+  <i class="ri-chat-quote-line text-blue-500 mr-2"></i>
+  Feedback van docent
+</h3>
+<p class="text-gray-600 italic">
+"Pieter heeft uitstekend leiderschap getoond en was zeer grondig in zijn onderzoek naar duurzame bouwmaterialen. Zijn presentatievaardigheden zijn sterk verbeterd tijdens dit project en hij wist complexe technische informatie helder over te brengen aan de opdrachtgever."
+</p>
+</div>
+<div class="mt-4 bg-green-50 p-4 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+<h3 class="font-medium mb-2 flex items-center">
+  <i class="ri-building-line text-green-500 mr-2"></i>
+  Feedback van opdrachtgever
+</h3>
+<p class="text-gray-600 italic">
+"Het team onder leiding van Pieter heeft verrassend innovatieve concepten aangedragen die zowel praktisch als economisch haalbaar zijn. Hun onderzoek naar circulaire bouwmaterialen heeft ons nieuwe inzichten gegeven die we zeker gaan toepassen in toekomstige projecten."
+</p>
+</div>
+</div>
+</section>
+<section class="bg-white rounded-lg shadow-sm p-6" data-aos="fade-up">
+<h2 class="text-2xl font-semibold mb-4">Bijlagen</h2>
+<div class="grid grid-cols-2 gap-4">
+<a href="#" class="attachment-link flex items-center p-4 border rounded-lg hover:bg-gray-50 cursor-pointer" data-aos="zoom-in" data-aos-delay="100" onclick="downloadFile('Eindrapport_Duurzame_Huizen.pdf'); return false;">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-file-pdf-line text-red-500 text-2xl"></i>
+</div>
+<div class="ml-3">
+<p class="font-medium">Eindrapport</p>
+<p class="text-sm text-gray-500">PDF - 2.4 MB</p>
+</div>
+<div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-download-line text-primary"></i>
+</div>
+</a>
+<a href="#" class="attachment-link flex items-center p-4 border rounded-lg hover:bg-gray-50 cursor-pointer" data-aos="zoom-in" data-aos-delay="200" onclick="downloadFile('Presentatie_Duurzame_Huizen.pptx'); return false;">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-file-ppt-line text-orange-500 text-2xl"></i>
+</div>
+<div class="ml-3">
+<p class="font-medium">Presentatie</p>
+<p class="text-sm text-gray-500">PPT - 5.1 MB</p>
+</div>
+<div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-download-line text-primary"></i>
+</div>
+</a>
+<a href="#" class="attachment-link flex items-center p-4 border rounded-lg hover:bg-gray-50 cursor-pointer" data-aos="zoom-in" data-aos-delay="300" onclick="downloadFile('3D_Model_Duurzaam_Huis.skp'); return false;">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-file-3d-line text-blue-500 text-2xl"></i>
+</div>
+<div class="ml-3">
+<p class="font-medium">3D Model</p>
+<p class="text-sm text-gray-500">SKP - 18.7 MB</p>
+</div>
+<div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-download-line text-primary"></i>
+</div>
+</a>
+<a href="#" class="attachment-link flex items-center p-4 border rounded-lg hover:bg-gray-50 cursor-pointer" data-aos="zoom-in" data-aos-delay="400" onclick="downloadFile('Materiaalonderzoek_Duurzame_Huizen.xlsx'); return false;">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-file-excel-line text-green-500 text-2xl"></i>
+</div>
+<div class="ml-3">
+<p class="font-medium">Materiaalonderzoek</p>
+<p class="text-sm text-gray-500">XLSX - 1.2 MB</p>
+</div>
+<div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-download-line text-primary"></i>
+</div>
+</a>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white mt-12">
+<div class="max-w-7xl mx-auto px-4 py-8">
+<div class="text-center">
+<p>© 2025 O&O Portfolio - Pieter Oosterling</p>
+<p class="text-gray-400 mt-2">4 VWO - RSG Slingerbos</p>
+</div>
+</div>
+</footer>
+<!-- Image Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden flex items-center justify-center p-4">
+  <div class="relative bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+    <div class="p-4 border-b flex justify-between items-center">
+      <h3 class="text-xl font-semibold" id="modalTitle">Afbeelding details</h3>
+      <button onclick="closeImageModal()" class="text-gray-500 hover:text-gray-700">
+        <i class="ri-close-line text-2xl"></i>
+      </button>
+    </div>
+    <div class="p-4 overflow-auto">
+      <img id="modalImage" src="" alt="Vergrote afbeelding" class="w-full h-auto max-h-[60vh] object-contain">
+    </div>
+  </div>
+</div>
+<script>
+// Initialize AOS animations
+function initAnimations() {
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+}
+// Toggle details for weekly reports
+function toggleDetails(weekId) {
+  const detailsElement = document.getElementById(`${weekId}-details`);
+  const iconElement = document.getElementById(`${weekId}-icon`);
+  const textElement = document.getElementById(`${weekId}-text`);
+  
+  if (detailsElement.classList.contains('hidden')) {
+    detailsElement.classList.remove('hidden');
+    detailsElement.classList.add('animate-fadeIn');
+    iconElement.classList.remove('ri-add-line');
+    iconElement.classList.add('ri-subtract-line');
+    textElement.textContent = 'Minder details';
+  } else {
+    detailsElement.classList.add('hidden');
+    iconElement.classList.remove('ri-subtract-line');
+    iconElement.classList.add('ri-add-line');
+    textElement.textContent = 'Meer details';
+  }
+}
+// Image modal functions
+function showImageModal(imageSrc, title) {
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  
+  modalImage.src = imageSrc;
+  modalTitle.textContent = title || 'Afbeelding details';
+  
+  modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+function closeImageModal() {
+  const modal = document.getElementById('imageModal');
+  modal.classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+// Simulate file download
+function downloadFile(filename) {
+  const downloadModal = document.createElement('div');
+  downloadModal.className = 'fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 animate-fadeIn z-50';
+  downloadModal.innerHTML = `
+    <div class="flex items-center">
+      <i class="ri-download-line text-primary text-xl mr-3"></i>
+      <div>
+        <p class="font-medium">Bestand wordt gedownload</p>
+        <p class="text-sm text-gray-500">${filename}</p>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(downloadModal);
+  
+  setTimeout(() => {
+    downloadModal.style.opacity = '0';
+    downloadModal.style.transition = 'opacity 0.5s ease';
+    setTimeout(() => {
+      document.body.removeChild(downloadModal);
+    }, 500);
+  }, 3000);
+}
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('imageModal');
+  if (event.target === modal) {
+    closeImageModal();
+  }
+});
+// Prevent scrolling when modal is open
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
+</body>
+</html>
