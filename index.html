@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mijn O&O Portfolio | Persoonlijke Ervaringen</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#3B82F6',
+secondary: '#10B981'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.nav-link.active { color: #3B82F6; }
+.project-card:hover { transform: translateY(-4px); }
+.timeline-dot::before {
+content: '';
+position: absolute;
+left: -39px;
+width: 20px;
+height: 20px;
+background: #3B82F6;
+border-radius: 50%;
+}
+.timeline-line::before {
+content: '';
+position: absolute;
+left: -30px;
+top: 0;
+width: 2px;
+height: 100%;
+background: #E5E7EB;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a href="index.html" class="text-2xl font-['Pacifico'] text-primary">Mijn O&O</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="index.html" class="nav-link active text-gray-700 hover:text-primary transition-colors">Home</a>
+<a href="index.html#projecten" class="nav-link text-gray-700 hover:text-primary transition-colors">Mijn Projecten</a>
+<a href="index.html#methodieken" class="nav-link text-gray-700 hover:text-primary transition-colors">Mijn Aanpak</a>
+<a href="index.html#ervaringen" class="nav-link text-gray-700 hover:text-primary transition-colors">Reflecties</a>
+<a href="index.html#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<section id="home" class="relative min-h-[80vh] flex items-center bg-gradient-to-r from-blue-50 to-green-50">
+<div class="absolute inset-0 bg-[url('https://public.readdy.ai/ai/img_res/cceadaaca1dba11599e2f9e6fedc8f9d.jpg')] bg-cover bg-center opacity-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="text-5xl font-bold text-gray-900 mb-6">Pieter en o&o</h1>
+<p class="text-xl text-gray-600 mb-8">Welkom op mijn persoonlijke O&O portfolio! Hier deel ik mijn ervaringen, projecten en reflecties van het vak Onderzoek & Ontwerpen. Ontdek hoe ik mijn creativiteit en innovatieve ideeën heb ontwikkeld.</p>
+<a href="#projecten" class="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-button hover:bg-blue-600 transition-colors">
+Bekijk Mijn Projecten
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="relative h-96">
+<img src="https://public.readdy.ai/ai/img_res/379b20c2dee811c6deb31a62cc57a881.jpg" alt="O&O Project" class="rounded-lg shadow-xl object-cover w-full h-full">
+</div>
+</div>
+</div>
+</section>
+<section id="projecten" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Mijn Projecten</h2>
+<div class="flex justify-center mb-8 space-x-4">
+<button class="px-6 py-2 rounded-full bg-primary text-white hover:bg-blue-600 transition-colors">Alle Jaren</button>
+<button class="px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">Jaar 1</button>
+<button class="px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">Jaar 2</button>
+<button class="px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">Jaar 3</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="project-card bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300">
+<img src="https://public.readdy.ai/ai/img_res/4ee78af98a02d74375d693f4ac03a7e2.jpg" alt="Duurzame Energie" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Duurzame Energieoplossingen</h3>
+<p class="text-gray-600 mb-4">Mijn onderzoek naar innovatieve manieren om duurzame energie toe te passen in onze school. Ik heb gewerkt aan een zonnecel prototype.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="text-sm text-gray-500">Cijfer:</span>
+<span class="font-medium text-gray-700">8,5</span>
+</div>
+<a href="project1.html" class="text-primary hover:text-blue-600 font-medium">Bekijk Project</a>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300">
+<img src="https://public.readdy.ai/ai/img_res/ccef7968bd839e490054f128235eef3c.jpg" alt="Smart City" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Smart City Ontwerp</h3>
+<p class="text-gray-600 mb-4">Mijn visie voor de slimme stad van de toekomst met focus op mobiliteit. Ik heb een 3D-model gemaakt van een duurzaam vervoerssysteem.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="text-sm text-gray-500">Cijfer:</span>
+<span class="font-medium text-gray-700">7,8</span>
+</div>
+<a href="project2.html" class="text-primary hover:text-blue-600 font-medium">Bekijk Project</a>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300">
+<img src="https://public.readdy.ai/ai/img_res/8c396b000a748a025af771de825e1783.jpg" alt="Robotica" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Robotica Innovatie</h3>
+<p class="text-gray-600 mb-4">Mijn ontwikkeling van een educatieve robot voor basisschoolleerlingen. Ik heb geleerd over programmeren en mechanisch ontwerp.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="text-sm text-gray-500">Cijfer:</span>
+<span class="font-medium text-gray-700">9,2</span>
+</div>
+<a href="project3.html" class="text-primary hover:text-blue-600 font-medium">Bekijk Project</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="methodieken" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Mijn Aanpak</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+<i class="ri-search-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Mijn Onderzoeksaanpak</h3>
+<p class="text-gray-600">Ik begin altijd met een grondige probleemanalyse en literatuuronderzoek. Ik heb geleerd hoe ik systematisch onderzoek kan doen en betrouwbare bronnen kan vinden.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mb-4">
+<i class="ri-pencil-ruler-line text-secondary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Mijn Ontwerpproces</h3>
+<p class="text-gray-600">Ik gebruik vaak brainstormsessies en schetsen om mijn ideeën te visualiseren. Daarna maak ik prototypes om mijn concepten te testen. Ik heb geleerd hoe belangrijk iteratie is in het ontwerpproces.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-4">
+<i class="ri-tools-line text-purple-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Mijn Realisatieproces</h3>
+<p class="text-gray-600">Bij het bouwen van mijn prototypes heb ik verschillende technieken geleerd, van 3D-printen tot programmeren. Ik heb ontdekt dat ik vooral sterk ben in het vertalen van concepten naar werkende modellen.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ervaringen" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Mijn Reflecties</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative pl-10 timeline-line">
+<div class="mb-8 timeline-dot">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Duurzame Energie Project - Juni 2024</h3>
+<p class="text-gray-600">Dit project heeft mijn ogen geopend voor de mogelijkheden van hernieuwbare energiebronnen. Ik heb niet alleen onderzoek gedaan, maar ook een werkend prototype gebouwd. De grootste uitdaging was het optimaliseren van de zonnecellen voor maximale efficiëntie.</p>
+</div>
+<div class="mb-8 timeline-dot">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Smart City Project - Maart 2024</h3>
+<p class="text-gray-600">Bij dit project heb ik geleerd hoe belangrijk samenwerking is. Ons team had verschillende ideeën, maar door goed te communiceren hebben we een coherent ontwerp gemaakt. Ik heb vooral veel geleerd over het maken van 3D-modellen en presentatietechnieken.</p>
+</div>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg">
+<div id="skillsChart" class="w-full h-80"></div>
+<div class="mt-4 text-center">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Mijn Vaardigheden Ontwikkeling</h3>
+<p class="text-gray-600">Deze grafiek toont mijn persoonlijke groei in verschillende vaardigheden tijdens mijn O&O projecten.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Contact</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Neem Contact Met Mij Op</h3>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Naam</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Bericht</label>
+<textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+</div>
+<button type="submit" class="w-full px-6 py-3 bg-primary text-white font-semibold rounded-button hover:bg-blue-600 transition-colors">Verstuur</button>
+</form>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Locatie</h3>
+<div class="aspect-w-16 aspect-h-9">
+<div class="w-full h-64 bg-[url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png')] bg-cover bg-center rounded-lg"></div>
+</div>
+<div class="mt-6">
+<p class="text-gray-600">
+<i class="ri-map-pin-line mr-2"></i>
+Schoolstraat 123, 1234 AB Amsterdam
+</p>
+<p class="text-gray-600 mt-2">
+<i class="ri-phone-line mr-2"></i>
+020 - 123 45 67
+</p>
+<p class="text-gray-600 mt-2">
+<i class="ri-mail-line mr-2"></i>
+info@oenschool.nl
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h4 class="text-lg font-semibold mb-4">Over Mijn Portfolio</h4>
+<p class="text-gray-400">Mijn persoonlijke reis door het vak Onderzoek & Ontwerpen en de projecten die ik heb gerealiseerd.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+<li><a href="#projecten" class="text-gray-400 hover:text-white">Projecten</a></li>
+<li><a href="#methodieken" class="text-gray-400 hover:text-white">Methodieken</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Social Media</h4>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white">
+<i class="ri-instagram-line text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white">
+<i class="ri-twitter-line text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white">
+<i class="ri-linkedin-line text-xl"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+<form class="flex">
+<input type="email" placeholder="Je email" class="flex-1 px-4 py-2 rounded-l-button bg-gray-800 border-none focus:ring-2 focus:ring-primary">
+<button type="submit" class="px-4 py-2 bg-primary text-white rounded-r-button hover:bg-blue-600">
+<i class="ri-send-plane-line"></i>
+</button>
+</form>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+<p>&copy; 2025 Mijn O&O Portfolio. Alle rechten voorbehouden.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const chart = echarts.init(document.getElementById('skillsChart'));
+const option = {
+animation: false,
+title: {
+text: 'Mijn Ontwikkelde Vaardigheden',
+textStyle: {
+color: '#1f2937'
+}
+},
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+textStyle: {
+color: '#1f2937'
+}
+},
+radar: {
+indicator: [
+{ name: 'Onderzoeken', max: 100 },
+{ name: 'Ontwerpen', max: 100 },
+{ name: 'Samenwerken', max: 100 },
+{ name: 'Presenteren', max: 100 },
+{ name: 'Creativiteit', max: 100 }
+]
+},
+series: [{
+type: 'radar',
+data: [{
+value: [85, 90, 95, 80, 88],
+name: 'Mijn Vaardigheden',
+itemStyle: {
+color: 'rgba(87, 181, 231, 1)'
+},
+areaStyle: {
+color: 'rgba(87, 181, 231, 0.1)'
+}
+}]
+}]
+};
+chart.setOption(option);
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+link.addEventListener('click', function() {
+navLinks.forEach(l => l.classList.remove('active'));
+this.classList.add('active');
+});
+});
+window.addEventListener('resize', function() {
+chart.resize();
+});
+});
+</script>
+</body>
+</html>
